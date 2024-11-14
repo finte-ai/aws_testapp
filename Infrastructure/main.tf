@@ -11,12 +11,11 @@ provider "aws" {
   region  = var.aws_region
 
   # provider level tags - yet inconsistent when executing 
-  # default_tags {
-  #   tags = {
-  #     Created_by = "Terraform"
-  #     Project    = "AWS_demo_fullstack_devops"
-  #   }
-  # }
+  default_tags {
+    tags = {
+      Service    = "finte_testapp"
+    }
+  }
 }
 
 # ------- Random numbers intended to be used as unique identifiers for resources -------
